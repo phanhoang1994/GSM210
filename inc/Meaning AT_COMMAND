@@ -1,0 +1,23 @@
+AT_CMD_AT - KIEM TRA XEM MODUL CO HOAT DONG K
+
+AT_CMD_ATE0 - TAT CHE DO ECHO
+
+AT_CMD_CNMI - CO TIN NHAN MOI
+
+AT_CMD_CMGF; DUA SMS VE DINH DANG TEXT
+
+AT_CMD_CMGD;  XOA HET CAC TIN NHAN TRONG SIM
+
+AT_CMD_CPIN; KIEM TRA SIM DA SAN SANG HAY CHUA--> GUI DI "AT+CPIN?" --> PHAN HOI "READY" --> SIM SAN SANG
+
+AT_CMD_CIMI; Check SIM ID
+
+AT_CMD_CMGS: cu phap de gui tin nhan "AT+CMGS="SDT""--> gui di --> doi phan "<" gui noi dung--> "ERRORxx 0X1A"
+
+AT_CMD_CMGR: doc 1 tin nhan
+	
+AT_CMD_CMTI: nhan "+CMTI" tu Modul sim -> bao co tin nhan vua gui den--> gui "AT+CMGR" --> Doc tin nhan  
+
+
+
+

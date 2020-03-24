@@ -1,0 +1,9 @@
+.\out\event.o: event.c
+.\out\event.o: inc/global.h
+.\out\event.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\out\event.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdbool.h
+.\out\event.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\cstdint
+.\out\event.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\out\event.o: inc/config.h
+.\out\event.o: inc/gsm210.h
+.\out\event.o: inc/event.h

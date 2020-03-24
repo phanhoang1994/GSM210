@@ -1,0 +1,17 @@
+.\out\gsm.o: gsm.c
+.\out\gsm.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\out\gsm.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\out\gsm.o: inc/global.h
+.\out\gsm.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdbool.h
+.\out\gsm.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\cstdint
+.\out\gsm.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\out\gsm.o: inc/config.h
+.\out\gsm.o: inc/gsm210.h
+.\out\gsm.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\out\gsm.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\out\gsm.o: inc/gsm.h
+.\out\gsm.o: inc/uart6.h
+.\out\gsm.o: inc/task.h
+.\out\gsm.o: inc/can_gsm.h
+.\out\gsm.o: inc/sysclock.h
+.\out\gsm.o: inc/uart4.h

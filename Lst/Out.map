@@ -1,0 +1,1083 @@
+Product: MDK-ARM Standard 5.10
+Component: ARM Compiler 5.04 update 1 (build 49)
+Tool: armlink [5040049]
+
+==============================================================================
+
+Section Cross References
+
+    event.o(i.ui8GetEvent) refers to event.o(.data) for .data
+    event.o(i.ui8GetEvent) refers to event.o(.bss) for .bss
+    event.o(i.ui8PostEvent) refers to event.o(.bss) for .bss
+    event.o(i.ui8PostEvent) refers to event.o(.data) for .data
+    main.o(i.main) refers to main.o(i.vHardwareConfig) for vHardwareConfig
+    main.o(i.main) refers to task.o(i.vTaskStartScheduler) for vTaskStartScheduler
+    main.o(i.main) refers to task.o(i.vTaskScheduler) for vTaskScheduler
+    main.o(i.main) refers to gsm.o(.data) for g_bGSM_Error
+    main.o(i.main) refers to main.o(.data) for .data
+    main.o(i.vHardwareConfig) refers to sysctl.o(i.SysCtlClockSet) for SysCtlClockSet
+    main.o(i.vHardwareConfig) refers to main.o(i.vMainConfig) for vMainConfig
+    main.o(i.vHardwareConfig) refers to uart6.o(i.vUART6Config) for vUART6Config
+    main.o(i.vHardwareConfig) refers to uart4.o(i.vUART4Config) for vUART4Config
+    main.o(i.vHardwareConfig) refers to gsm.o(i.vGSMConfig) for vGSMConfig
+    main.o(i.vHardwareConfig) refers to sysclock.o(i.vSysTickConfig) for vSysTickConfig
+    main.o(i.vHardwareConfig) refers to main.o(i.vWDTConfig) for vWDTConfig
+    main.o(i.vHardwareConfig) refers to interrupt.o(i.IntMasterEnable) for IntMasterEnable
+    main.o(i.vMainConfig) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    main.o(i.vMainConfig) refers to gpio.o(i.GPIOPinTypeGPIOOutput) for GPIOPinTypeGPIOOutput
+    main.o(i.vMainConfig) refers to gpio.o(i.GPIOPinTypeGPIOInput) for GPIOPinTypeGPIOInput
+    main.o(i.vMainConfig) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    main.o(i.vWDTConfig) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    main.o(i.vWDTConfig) refers to interrupt.o(i.IntEnable) for IntEnable
+    main.o(i.vWDTConfig) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    main.o(i.vWDTConfig) refers to watchdog.o(i.WatchdogReloadSet) for WatchdogReloadSet
+    main.o(i.vWDTConfig) refers to watchdog.o(i.WatchdogResetEnable) for WatchdogResetEnable
+    main.o(i.vWDTConfig) refers to watchdog.o(i.WatchdogEnable) for WatchdogEnable
+    main.o(i.vWDTHandler) refers to watchdog.o(i.WatchdogIntClear) for WatchdogIntClear
+    main.o(i.vWDTHandler) refers to main.o(.data) for .data
+    sysclock.o(i.vInput) refers to gpio.o(i.GPIOPinRead) for GPIOPinRead
+    sysclock.o(i.vInput) refers to sysclock.o(.bss) for .bss
+    sysclock.o(i.vInput) refers to sysclock.o(.data) for .data
+    sysclock.o(i.vSysTickConfig) refers to systick.o(i.SysTickPeriodSet) for SysTickPeriodSet
+    sysclock.o(i.vSysTickConfig) refers to systick.o(i.SysTickIntEnable) for SysTickIntEnable
+    sysclock.o(i.vSysTickHandler) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    sysclock.o(i.vSysTickHandler) refers to uart6.o(.data) for g_ui32UART6DelayRx
+    sysclock.o(i.vSysTickHandler) refers to sysclock.o(.data) for .data
+    sysclock.o(i.vSysTickHandler) refers to gsm.o(.data) for ulTimerRestart
+    sysclock.o(i.vSysTickTimerExpired) refers to gsm.o(i.ui8GSMPoll) for ui8GSMPoll
+    sysclock.o(i.vSysTickTimerExpired) refers to event.o(i.ui8PostEvent) for ui8PostEvent
+    sysclock.o(i.vSysTickTimerExpired) refers to sysclock.o(i.vInput) for vInput
+    sysclock.o(i.vSysTickTimerExpired) refers to sysclock.o(.data) for .data
+    sysclock.o(i.vSysTickTimerExpired) refers to gsm.o(.data) for g_ui8GSMCommandDelay
+    sysclock.o(i.vSysTickTimerExpired) refers to uart6.o(.data) for g_ui32UART6DelayTx
+    sysclock.o(i.vSysTickTimerExpired) refers to main.o(.constdata) for MASK
+    sysclock.o(i.vSysTickTimerExpired) refers to gsm.o(.data) for g_bGSM_Error
+    task.o(i.vTaskScheduler) refers to sysclock.o(i.vSysTickTimerExpired) for vSysTickTimerExpired
+    task.o(i.vTaskScheduler) refers to event.o(i.ui8GetEvent) for ui8GetEvent
+    task.o(i.vTaskScheduler) refers to gsm.o(.data) for g_eGSMState
+    task.o(i.vTaskStartScheduler) refers to gsm.o(i.ui8GSMPoll) for ui8GSMPoll
+    task.o(i.vTaskStartScheduler) refers to systick.o(i.SysTickEnable) for SysTickEnable
+    uart6.o(i.vUART6Config) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    uart6.o(i.vUART6Config) refers to gpio.o(i.GPIOPinTypeUART) for GPIOPinTypeUART
+    uart6.o(i.vUART6Config) refers to gpio.o(i.GPIOPinConfigure) for GPIOPinConfigure
+    uart6.o(i.vUART6Config) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    uart6.o(i.vUART6Config) refers to uart.o(i.UARTConfigSetExpClk) for UARTConfigSetExpClk
+    uart6.o(i.vUART6Config) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart6.o(i.vUART6Config) refers to uart.o(i.UARTIntEnable) for UARTIntEnable
+    uart6.o(i.vUART6Config) refers to uart.o(i.UARTFIFOLevelSet) for UARTFIFOLevelSet
+    uart6.o(i.vUART6Config) refers to uart6.o(.data) for .data
+    uart6.o(i.vUART6Handler) refers to uart.o(i.UARTIntStatus) for UARTIntStatus
+    uart6.o(i.vUART6Handler) refers to uart.o(i.UARTIntClear) for UARTIntClear
+    uart6.o(i.vUART6Handler) refers to uart.o(i.UARTCharPutNonBlocking) for UARTCharPutNonBlocking
+    uart6.o(i.vUART6Handler) refers to uart.o(i.UARTCharGet) for UARTCharGet
+    uart6.o(i.vUART6Handler) refers to uart.o(i.UARTCharsAvail) for UARTCharsAvail
+    uart6.o(i.vUART6Handler) refers to uart6.o(.bss) for .bss
+    uart6.o(i.vUART6Handler) refers to uart6.o(.data) for .data
+    uart6.o(i.vUART6PutString) refers to uart.o(i.UARTCharPut) for UARTCharPut
+    uart6.o(i.vUART6Send) refers to uart.o(i.UARTCharPutNonBlocking) for UARTCharPutNonBlocking
+    uart6.o(i.vUART6Send) refers to uart6.o(.data) for .data
+    uart6.o(i.vUART6Send) refers to uart6.o(.bss) for .bss
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to sysclock.o(i.vSysTickHandler) for vSysTickHandler
+    startup_rvmdk.o(RESET) refers to main.o(i.vWDTHandler) for vWDTHandler
+    startup_rvmdk.o(RESET) refers to uart4.o(i.vUART4Handler) for vUART4Handler
+    startup_rvmdk.o(RESET) refers to uart6.o(i.vUART6Handler) for vUART6Handler
+    startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    uart4.o(i.vUART4Config) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    uart4.o(i.vUART4Config) refers to gpio.o(i.GPIOPinTypeGPIOOutput) for GPIOPinTypeGPIOOutput
+    uart4.o(i.vUART4Config) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    uart4.o(i.vUART4Config) refers to gpio.o(i.GPIOPinTypeUART) for GPIOPinTypeUART
+    uart4.o(i.vUART4Config) refers to gpio.o(i.GPIOPinConfigure) for GPIOPinConfigure
+    uart4.o(i.vUART4Config) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    uart4.o(i.vUART4Config) refers to uart.o(i.UARTConfigSetExpClk) for UARTConfigSetExpClk
+    uart4.o(i.vUART4Config) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart4.o(i.vUART4Config) refers to uart.o(i.UARTIntEnable) for UARTIntEnable
+    uart4.o(i.vUART4Config) refers to uart.o(i.UARTFIFOLevelSet) for UARTFIFOLevelSet
+    uart4.o(i.vUART4Config) refers to uart4.o(.data) for .data
+    uart4.o(i.vUART4Handler) refers to uart.o(i.UARTIntStatus) for UARTIntStatus
+    uart4.o(i.vUART4Handler) refers to uart.o(i.UARTIntClear) for UARTIntClear
+    uart4.o(i.vUART4Handler) refers to uart.o(i.UARTCharPutNonBlocking) for UARTCharPutNonBlocking
+    uart4.o(i.vUART4Handler) refers to uart.o(i.UARTCharGet) for UARTCharGet
+    uart4.o(i.vUART4Handler) refers to uart.o(i.UARTCharsAvail) for UARTCharsAvail
+    uart4.o(i.vUART4Handler) refers to uart4.o(.bss) for .bss
+    uart4.o(i.vUART4Handler) refers to uart4.o(.data) for .data
+    uart4.o(i.vUART4PutString) refers to uart.o(i.UARTCharPut) for UARTCharPut
+    uart4.o(i.vUART4Send) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    uart4.o(i.vUART4Send) refers to uart.o(i.UARTCharPutNonBlocking) for UARTCharPutNonBlocking
+    uart4.o(i.vUART4Send) refers to uart4.o(.data) for .data
+    uart4.o(i.vUART4Send) refers to uart4.o(.bss) for .bss
+    gsm.o(i.eGSMSendCmd) refers to strcpy.o(.text) for strcpy
+    gsm.o(i.eGSMSendCmd) refers to strcat.o(.text) for strcat
+    gsm.o(i.eGSMSendCmd) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    gsm.o(i.eGSMSendCmd) refers to gsm.o(i.ui8GSMSendATCommand) for ui8GSMSendATCommand
+    gsm.o(i.eGSMSendCmd) refers to gsm.o(i.eGSMWaitOK) for eGSMWaitOK
+    gsm.o(i.eGSMSendCmd) refers to gsm.o(.data) for .data
+    gsm.o(i.eGSMSendCmd) refers to gsm.o(.bss) for .bss
+    gsm.o(i.eGSMSendCmd) refers to gsm.o(i.eGSMWaitSendMsg) for eGSMWaitSendMsg
+    gsm.o(i.eGSMSendMsg) refers to gsm.o(i.ui8GSMSendATCommand2) for ui8GSMSendATCommand2
+    gsm.o(i.eGSMSendMsg) refers to gsm.o(i.eGSMWaitOK) for eGSMWaitOK
+    gsm.o(i.eGSMSendMsg) refers to gsm.o(.data) for .data
+    gsm.o(i.eGSMSendMsg) refers to gsm.o(.bss) for .bss
+    gsm.o(i.eGSMWaitOK) refers to strstr.o(.text) for strstr
+    gsm.o(i.eGSMWaitOK) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.eGSMWaitOK) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.eGSMWaitSendMsg) refers to strstr.o(.text) for strstr
+    gsm.o(i.eGSMWaitSendMsg) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.eGSMWaitSendMsg) refers to gsm.o(i.eGSMSendMsg) for eGSMSendMsg
+    gsm.o(i.eGSMWaitSendMsg) refers to gsm.o(.data) for .data
+    gsm.o(i.eGSMWaitStatusCall) refers to strstr.o(.text) for strstr
+    gsm.o(i.eGSMWaitStatusCall) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.eGSMWaitStatusCall) refers to gsm.o(.data) for .data
+    gsm.o(i.eGSMWaitStatusCall) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.eGSMWaitStatusReadNoPhone) refers to strstr.o(.text) for strstr
+    gsm.o(i.eGSMWaitStatusReadNoPhone) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.eGSMWaitStatusReadNoPhone) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMGetMsg) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMGetMsg) refers to gsm.o(.bss) for .bss
+    gsm.o(i.ui8GSMPoll) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.vReadPhonebook) for vReadPhonebook
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.vGSMUpdate) for vGSMUpdate
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.vCheckAccount) for vCheckAccount
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.vReadSignal) for vReadSignal
+    gsm.o(i.ui8GSMPoll) refers to uart4.o(i.vUART4Send) for vUART4Send
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.ui8GSMGetMsg) for ui8GSMGetMsg
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(.bss) for .bss
+    gsm.o(i.ui8GSMPoll) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.ui8GSMPoll) refers to gsm.o(i.eGSMSendCmd) for eGSMSendCmd
+    gsm.o(i.ui8GSMPostMsg) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMPostMsg) refers to gsm.o(.bss) for .bss
+    gsm.o(i.ui8GSMSendATCmdCall) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.ui8GSMSendATCmdCall) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMSendATCmdCall) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.ui8GSMSendATCmdDisCall) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.ui8GSMSendATCmdDisCall) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMSendATCmdDisCall) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.ui8GSMSendATCmdReadNoPhone) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.ui8GSMSendATCmdReadNoPhone) refers to gsm.o(.data) for .data
+    gsm.o(i.ui8GSMSendATCommand) refers to strcpy.o(.text) for strcpy
+    gsm.o(i.ui8GSMSendATCommand) refers to strcat.o(.text) for strcat
+    gsm.o(i.ui8GSMSendATCommand) refers to strlen.o(.text) for strlen
+    gsm.o(i.ui8GSMSendATCommand) refers to uart6.o(i.vUART6Send) for vUART6Send
+    gsm.o(i.ui8GSMSendATCommand) refers to uart6.o(.bss) for g_ui8UART6FrameTx
+    gsm.o(i.ui8GSMSendATCommand2) refers to strcpy.o(.text) for strcpy
+    gsm.o(i.ui8GSMSendATCommand2) refers to strcat.o(.text) for strcat
+    gsm.o(i.ui8GSMSendATCommand2) refers to strlen.o(.text) for strlen
+    gsm.o(i.ui8GSMSendATCommand2) refers to uart6.o(i.vUART6Send) for vUART6Send
+    gsm.o(i.ui8GSMSendATCommand2) refers to uart6.o(.bss) for g_ui8UART6FrameTx
+    gsm.o(i.vATCmdConfig) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.vCheckAccount) refers to strstr.o(.text) for strstr
+    gsm.o(i.vCheckAccount) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.vCheckAccount) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.vCheckAccount) refers to gsm.o(.data) for .data
+    gsm.o(i.vCheckAccount) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.vCheckAccount) refers to gsm.o(.bss) for .bss
+    gsm.o(i.vGSMConfig) refers to gsm.o(i.vATCmdConfig) for vATCmdConfig
+    gsm.o(i.vGSMConfig) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    gsm.o(i.vGSMConfig) refers to gsm.o(.data) for .data
+    gsm.o(i.vGSMConfig) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.vGSMUpdate) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.vGSMUpdate) refers to gsm.o(i.eGSMWaitStatusCall) for eGSMWaitStatusCall
+    gsm.o(i.vGSMUpdate) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    gsm.o(i.vGSMUpdate) refers to gsm.o(i.ui8GSMSendATCmdCall) for ui8GSMSendATCmdCall
+    gsm.o(i.vGSMUpdate) refers to gsm.o(i.ui8GSMSendATCmdDisCall) for ui8GSMSendATCmdDisCall
+    gsm.o(i.vGSMUpdate) refers to gsm.o(.data) for .data
+    gsm.o(i.vGSMUpdate) refers to gsm.o(.constdata) for .constdata
+    gsm.o(i.vGSMUpdate) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.vGSMUpdate) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.vReadPhonebook) refers to gsm.o(i.ui8GSMSendATCmdReadNoPhone) for ui8GSMSendATCmdReadNoPhone
+    gsm.o(i.vReadPhonebook) refers to gsm.o(i.eGSMWaitStatusReadNoPhone) for eGSMWaitStatusReadNoPhone
+    gsm.o(i.vReadPhonebook) refers to gsm.o(.data) for .data
+    gsm.o(i.vReadPhonebook) refers to uart4.o(.bss) for ucUART4FrameTx
+    gsm.o(i.vReadSignal) refers to gsm.o(i.ui8GSMPostMsg) for ui8GSMPostMsg
+    gsm.o(i.vReadSignal) refers to gsm.o(i.ui8GSMGetMsg) for ui8GSMGetMsg
+    gsm.o(i.vReadSignal) refers to strstr.o(.text) for strstr
+    gsm.o(i.vReadSignal) refers to gsm.o(.bss) for .bss
+    gsm.o(i.vReadSignal) refers to gsm.o(.data) for .data
+    gsm.o(i.vReadSignal) refers to gsm.o(i.eGSMSendCmd) for eGSMSendCmd
+    gsm.o(i.vReadSignal) refers to uart6.o(.bss) for g_ui8UART6BufferRx
+    gsm.o(i.vReadSignal) refers to uart4.o(.bss) for ucUART4FrameTx
+    gpio.o(i.GPIOIntRegister) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    gpio.o(i.GPIOIntRegisterPin) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntRegisterPin) refers to interrupt.o(i.IntRegister) for IntRegister
+    gpio.o(i.GPIOIntRegisterPin) refers to interrupt.o(i.IntEnable) for IntEnable
+    gpio.o(i.GPIOIntUnregister) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    gpio.o(i.GPIOIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    gpio.o(i.GPIOIntUnregisterPin) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntUnregisterPin) refers to interrupt.o(i.IntDisable) for IntDisable
+    gpio.o(i.GPIOIntUnregisterPin) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    gpio.o(i.GPIOPinConfigure) refers to gpio.o(.constdata) for .constdata
+    gpio.o(i.GPIOPinTypeADC) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeADC) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeCAN) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeCAN) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeComparator) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeComparator) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeComparatorOutput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeComparatorOutput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeDIVSCLK) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeDIVSCLK) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEPI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEPI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEthernetLED) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEthernetLED) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEthernetMII) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEthernetMII) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOInput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeGPIOInput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeGPIOOutputOD) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutputOD) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeHibernateRTCCLK) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeHibernateRTCCLK) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeI2C) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeI2C) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeI2CSCL) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeI2CSCL) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeLCD) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeLCD) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeOneWire) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeOneWire) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypePWM) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypePWM) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeQEI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeQEI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeSSI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeSSI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeTimer) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeTimer) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeTrace) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeTrace) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUART) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUART) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUSBAnalog) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUSBAnalog) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUSBDigital) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUSBDigital) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeWakeHigh) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeWakeHigh) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeWakeLow) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeWakeLow) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i._GPIOIntNumberGet) refers to gpio.o(.constdata) for .constdata
+    interrupt.o(i.IntDisable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntEnable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntIsEnabled) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntMasterDisable) refers to cpu.o(.emb_text) for CPUcpsid
+    interrupt.o(i.IntMasterEnable) refers to cpu.o(.emb_text) for CPUcpsie
+    interrupt.o(i.IntPendClear) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPendSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityMaskGet) refers to cpu.o(.emb_text) for CPUbasepriGet
+    interrupt.o(i.IntPriorityMaskSet) refers to cpu.o(.emb_text) for CPUbasepriSet
+    interrupt.o(i.IntPrioritySet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntRegister) refers to interrupt.o(vtable) for vtable
+    interrupt.o(i.IntUnregister) refers to interrupt.o(i._IntDefaultHandler) for _IntDefaultHandler
+    interrupt.o(i.IntUnregister) refers to interrupt.o(vtable) for vtable
+    sysctl.o(i.SysCtlClockFreqSet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockGet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockSet) refers to sysctl.o(.emb_text) for SysCtlDelay
+    sysctl.o(i.SysCtlDeepSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    sysctl.o(i.SysCtlSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlVCOGet) refers to sysctl.o(.constdata) for .constdata
+    systick.o(i.SysTickIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    systick.o(i.SysTickIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart.o(i.UARTIntRegister) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntUnregister) refers to uart.o(.constdata) for .constdata
+    watchdog.o(i.WatchdogIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    watchdog.o(i.WatchdogIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    watchdog.o(i.WatchdogIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    watchdog.o(i.WatchdogIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing uart6.o(i.vUART6PutString), (28 bytes).
+    Removing startup_rvmdk.o(HEAP), (0 bytes).
+    Removing startup_rvmdk.o(.text), (0 bytes).
+    Removing uart4.o(i.vUART4PutString), (28 bytes).
+    Removing gsm.o(.data), (11 bytes).
+    Removing gsm.o(.data), (5 bytes).
+    Removing gsm.o(.data), (1 bytes).
+    Removing gsm.o(.data), (1 bytes).
+    Removing gpio.o(i.GPIOADCTriggerDisable), (14 bytes).
+    Removing gpio.o(i.GPIOADCTriggerEnable), (12 bytes).
+    Removing gpio.o(i.GPIODMATriggerDisable), (14 bytes).
+    Removing gpio.o(i.GPIODMATriggerEnable), (12 bytes).
+    Removing gpio.o(i.GPIODirModeGet), (34 bytes).
+    Removing gpio.o(i.GPIOIntClear), (6 bytes).
+    Removing gpio.o(i.GPIOIntDisable), (14 bytes).
+    Removing gpio.o(i.GPIOIntEnable), (12 bytes).
+    Removing gpio.o(i.GPIOIntRegister), (26 bytes).
+    Removing gpio.o(i.GPIOIntRegisterPin), (30 bytes).
+    Removing gpio.o(i.GPIOIntStatus), (14 bytes).
+    Removing gpio.o(i.GPIOIntTypeGet), (68 bytes).
+    Removing gpio.o(i.GPIOIntTypeSet), (80 bytes).
+    Removing gpio.o(i.GPIOIntUnregister), (22 bytes).
+    Removing gpio.o(i.GPIOIntUnregisterPin), (26 bytes).
+    Removing gpio.o(i.GPIOPadConfigGet), (204 bytes).
+    Removing gpio.o(i.GPIOPinTypeADC), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeCAN), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeComparator), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeComparatorOutput), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeDIVSCLK), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEPI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEthernetLED), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEthernetMII), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeGPIOOutputOD), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeHibernateRTCCLK), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeI2C), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeI2CSCL), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeLCD), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeOneWire), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypePWM), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeQEI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeSSI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeTimer), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeTrace), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeUSBAnalog), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeUSBDigital), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeWakeHigh), (30 bytes).
+    Removing gpio.o(i.GPIOPinTypeWakeLow), (30 bytes).
+    Removing gpio.o(i.GPIOPinWakeStatus), (6 bytes).
+    Removing gpio.o(i._GPIOIntNumberGet), (80 bytes).
+    Removing interrupt.o(i.IntDisable), (100 bytes).
+    Removing interrupt.o(i.IntIsEnabled), (96 bytes).
+    Removing interrupt.o(i.IntMasterDisable), (14 bytes).
+    Removing interrupt.o(i.IntPendClear), (68 bytes).
+    Removing interrupt.o(i.IntPendSet), (84 bytes).
+    Removing interrupt.o(i.IntPriorityGet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingGet), (36 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingSet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityMaskGet), (4 bytes).
+    Removing interrupt.o(i.IntPriorityMaskSet), (4 bytes).
+    Removing interrupt.o(i.IntPrioritySet), (40 bytes).
+    Removing interrupt.o(i.IntRegister), (52 bytes).
+    Removing interrupt.o(i.IntTrigger), (12 bytes).
+    Removing interrupt.o(i.IntUnregister), (20 bytes).
+    Removing interrupt.o(i._IntDefaultHandler), (2 bytes).
+    Removing interrupt.o(vtable), (620 bytes).
+    Removing sysctl.o(i.SysCtlAltClkConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlClockFreqSet), (740 bytes).
+    Removing sysctl.o(i.SysCtlClockOutConfig), (20 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleep), (32 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockConfigSet), (112 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlFlashSectorSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlFlashSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBDisable), (28 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBEnable), (24 bytes).
+    Removing sysctl.o(i.SysCtlIntClear), (12 bytes).
+    Removing sysctl.o(i.SysCtlIntDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntRegister), (20 bytes).
+    Removing sysctl.o(i.SysCtlIntStatus), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntUnregister), (18 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlMOSCConfigSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlNMIClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlNMIStatus), (12 bytes).
+    Removing sysctl.o(i.SysCtlPIOSCCalibrate), (76 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockGet), (24 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockSet), (20 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralClockGating), (68 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOff), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOn), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPresent), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReady), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReset), (60 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlReset), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlSRAMSizeGet), (16 bytes).
+    Removing sysctl.o(i.SysCtlSleep), (4 bytes).
+    Removing sysctl.o(i.SysCtlSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlVCOGet), (120 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventStatus), (12 bytes).
+    Removing systick.o(i.SysTickDisable), (14 bytes).
+    Removing systick.o(i.SysTickIntDisable), (14 bytes).
+    Removing systick.o(i.SysTickIntRegister), (24 bytes).
+    Removing systick.o(i.SysTickIntUnregister), (18 bytes).
+    Removing systick.o(i.SysTickPeriodGet), (10 bytes).
+    Removing systick.o(i.SysTickValueGet), (8 bytes).
+    Removing uart.o(i.UART9BitAddrSend), (38 bytes).
+    Removing uart.o(i.UART9BitAddrSet), (10 bytes).
+    Removing uart.o(i.UART9BitDisable), (14 bytes).
+    Removing uart.o(i.UART9BitEnable), (14 bytes).
+    Removing uart.o(i.UARTBreakCtl), (18 bytes).
+    Removing uart.o(i.UARTBusy), (8 bytes).
+    Removing uart.o(i.UARTCharGetNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharPut), (12 bytes).
+    Removing uart.o(i.UARTClockSourceGet), (6 bytes).
+    Removing uart.o(i.UARTClockSourceSet), (6 bytes).
+    Removing uart.o(i.UARTConfigGetExpClk), (46 bytes).
+    Removing uart.o(i.UARTDMADisable), (10 bytes).
+    Removing uart.o(i.UARTDMAEnable), (8 bytes).
+    Removing uart.o(i.UARTDisable), (30 bytes).
+    Removing uart.o(i.UARTDisableSIR), (10 bytes).
+    Removing uart.o(i.UARTEnable), (20 bytes).
+    Removing uart.o(i.UARTEnableSIR), (18 bytes).
+    Removing uart.o(i.UARTFIFODisable), (10 bytes).
+    Removing uart.o(i.UARTFIFOEnable), (10 bytes).
+    Removing uart.o(i.UARTFIFOLevelGet), (16 bytes).
+    Removing uart.o(i.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(i.UARTFlowControlSet), (12 bytes).
+    Removing uart.o(i.UARTIntDisable), (10 bytes).
+    Removing uart.o(i.UARTIntRegister), (88 bytes).
+    Removing uart.o(i.UARTIntUnregister), (88 bytes).
+    Removing uart.o(i.UARTLoopbackEnable), (10 bytes).
+    Removing uart.o(i.UARTModemControlClear), (14 bytes).
+    Removing uart.o(i.UARTModemControlGet), (8 bytes).
+    Removing uart.o(i.UARTModemControlSet), (12 bytes).
+    Removing uart.o(i.UARTModemStatusGet), (10 bytes).
+    Removing uart.o(i.UARTParityModeGet), (8 bytes).
+    Removing uart.o(i.UARTParityModeSet), (12 bytes).
+    Removing uart.o(i.UARTRxErrorClear), (6 bytes).
+    Removing uart.o(i.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(i.UARTSmartCardDisable), (10 bytes).
+    Removing uart.o(i.UARTSmartCardEnable), (22 bytes).
+    Removing uart.o(i.UARTSpaceAvail), (10 bytes).
+    Removing uart.o(i.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(i.UARTTxIntModeSet), (12 bytes).
+    Removing uart.o(.constdata), (128 bytes).
+    Removing watchdog.o(i.WatchdogIntEnable), (10 bytes).
+    Removing watchdog.o(i.WatchdogIntRegister), (18 bytes).
+    Removing watchdog.o(i.WatchdogIntStatus), (10 bytes).
+    Removing watchdog.o(i.WatchdogIntTypeSet), (12 bytes).
+    Removing watchdog.o(i.WatchdogIntUnregister), (18 bytes).
+    Removing watchdog.o(i.WatchdogLock), (8 bytes).
+    Removing watchdog.o(i.WatchdogLockState), (12 bytes).
+    Removing watchdog.o(i.WatchdogReloadGet), (4 bytes).
+    Removing watchdog.o(i.WatchdogResetDisable), (10 bytes).
+    Removing watchdog.o(i.WatchdogRunning), (8 bytes).
+    Removing watchdog.o(i.WatchdogStallDisable), (14 bytes).
+    Removing watchdog.o(i.WatchdogStallEnable), (14 bytes).
+    Removing watchdog.o(i.WatchdogUnlock), (12 bytes).
+    Removing watchdog.o(i.WatchdogValueGet), (4 bytes).
+
+177 unused section(s) (total 5848 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/string/strcat.c         0x00000000   Number         0  strcat.o ABSOLUTE
+    ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/string/strstr.c         0x00000000   Number         0  strstr.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    event.c                                  0x00000000   Number         0  event.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    gsm.c                                    0x00000000   Number         0  gsm.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    interrupt.c                              0x00000000   Number         0  interrupt.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    sysclock.c                               0x00000000   Number         0  sysclock.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    systick.c                                0x00000000   Number         0  systick.o ABSOLUTE
+    task.c                                   0x00000000   Number         0  task.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    uart4.c                                  0x00000000   Number         0  uart4.o ABSOLUTE
+    uart6.c                                  0x00000000   Number         0  uart6.o ABSOLUTE
+    watchdog.c                               0x00000000   Number         0  watchdog.o ABSOLUTE
+    $v0                                      0x0000026c   Number         0  startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000281   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup_rvmdk.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000288   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000288   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000028c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000290   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000290   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000290   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000298   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000298   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000298   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000298   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x0000029c   Section        6  sysctl.o(.emb_text)
+    $v0                                      0x0000029c   Number         0  sysctl.o(.emb_text)
+    .emb_text                                0x000002a4   Section       38  cpu.o(.emb_text)
+    $v0                                      0x000002a4   Number         0  cpu.o(.emb_text)
+    .text                                    0x000002ca   Section        0  strcat.o(.text)
+    .text                                    0x000002e2   Section        0  strstr.o(.text)
+    .text                                    0x00000306   Section        0  strlen.o(.text)
+    .text                                    0x00000314   Section        0  strcpy.o(.text)
+    .text                                    0x00000328   Section       36  init.o(.text)
+    i.GPIODirModeSet                         0x0000034c   Section        0  gpio.o(i.GPIODirModeSet)
+    i.GPIOPadConfigSet                       0x00000374   Section        0  gpio.o(i.GPIOPadConfigSet)
+    i.GPIOPinConfigure                       0x000004ac   Section        0  gpio.o(i.GPIOPinConfigure)
+    i.GPIOPinRead                            0x000004f0   Section        0  gpio.o(i.GPIOPinRead)
+    i.GPIOPinTypeGPIOInput                   0x000004f6   Section        0  gpio.o(i.GPIOPinTypeGPIOInput)
+    i.GPIOPinTypeGPIOOutput                  0x00000512   Section        0  gpio.o(i.GPIOPinTypeGPIOOutput)
+    i.GPIOPinTypeUART                        0x0000052e   Section        0  gpio.o(i.GPIOPinTypeUART)
+    i.GPIOPinWrite                           0x0000054a   Section        0  gpio.o(i.GPIOPinWrite)
+    i.IntEnable                              0x00000550   Section        0  interrupt.o(i.IntEnable)
+    i.IntMasterEnable                        0x000005b4   Section        0  interrupt.o(i.IntMasterEnable)
+    i.SysCtlClockGet                         0x000005c4   Section        0  sysctl.o(i.SysCtlClockGet)
+    i.SysCtlClockSet                         0x00000718   Section        0  sysctl.o(i.SysCtlClockSet)
+    i.SysCtlPeripheralEnable                 0x00000838   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
+    i.SysTickEnable                          0x00000860   Section        0  systick.o(i.SysTickEnable)
+    i.SysTickIntEnable                       0x0000086e   Section        0  systick.o(i.SysTickIntEnable)
+    i.SysTickPeriodSet                       0x0000087c   Section        0  systick.o(i.SysTickPeriodSet)
+    i.UARTCharGet                            0x00000886   Section        0  uart.o(i.UARTCharGet)
+    i.UARTCharPutNonBlocking                 0x00000892   Section        0  uart.o(i.UARTCharPutNonBlocking)
+    i.UARTCharsAvail                         0x000008a2   Section        0  uart.o(i.UARTCharsAvail)
+    i.UARTConfigSetExpClk                    0x000008ac   Section        0  uart.o(i.UARTConfigSetExpClk)
+    i.UARTFIFOLevelSet                       0x0000091a   Section        0  uart.o(i.UARTFIFOLevelSet)
+    i.UARTIntClear                           0x00000920   Section        0  uart.o(i.UARTIntClear)
+    i.UARTIntEnable                          0x00000924   Section        0  uart.o(i.UARTIntEnable)
+    i.UARTIntStatus                          0x0000092c   Section        0  uart.o(i.UARTIntStatus)
+    i.WatchdogEnable                         0x00000936   Section        0  watchdog.o(i.WatchdogEnable)
+    i.WatchdogIntClear                       0x00000940   Section        0  watchdog.o(i.WatchdogIntClear)
+    i.WatchdogReloadSet                      0x00000946   Section        0  watchdog.o(i.WatchdogReloadSet)
+    i.WatchdogResetEnable                    0x0000094a   Section        0  watchdog.o(i.WatchdogResetEnable)
+    i.__scatterload_copy                     0x00000954   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000962   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000964   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.eGSMSendCmd                            0x00000974   Section        0  gsm.o(i.eGSMSendCmd)
+    i.eGSMSendMsg                            0x00000bd4   Section        0  gsm.o(i.eGSMSendMsg)
+    i.eGSMWaitOK                             0x00000bf8   Section        0  gsm.o(i.eGSMWaitOK)
+    i.eGSMWaitSendMsg                        0x00000c44   Section        0  gsm.o(i.eGSMWaitSendMsg)
+    i.eGSMWaitStatusCall                     0x00000c78   Section        0  gsm.o(i.eGSMWaitStatusCall)
+    i.eGSMWaitStatusReadNoPhone              0x00000cfc   Section        0  gsm.o(i.eGSMWaitStatusReadNoPhone)
+    i.main                                   0x00000d60   Section        0  main.o(i.main)
+    i.ui8GSMGetMsg                           0x00000d84   Section        0  gsm.o(i.ui8GSMGetMsg)
+    i.ui8GSMPoll                             0x00000dc8   Section        0  gsm.o(i.ui8GSMPoll)
+    i.ui8GSMPostMsg                          0x00000edc   Section        0  gsm.o(i.ui8GSMPostMsg)
+    i.ui8GSMSendATCmdCall                    0x00000f1c   Section        0  gsm.o(i.ui8GSMSendATCmdCall)
+    i.ui8GSMSendATCmdDisCall                 0x00000f68   Section        0  gsm.o(i.ui8GSMSendATCmdDisCall)
+    i.ui8GSMSendATCmdReadNoPhone             0x00000f9c   Section        0  gsm.o(i.ui8GSMSendATCmdReadNoPhone)
+    i.ui8GSMSendATCommand                    0x00000fb4   Section        0  gsm.o(i.ui8GSMSendATCommand)
+    i.ui8GSMSendATCommand2                   0x00000ff4   Section        0  gsm.o(i.ui8GSMSendATCommand2)
+    i.ui8GetEvent                            0x00001038   Section        0  event.o(i.ui8GetEvent)
+    i.ui8PostEvent                           0x0000106c   Section        0  event.o(i.ui8PostEvent)
+    i.vATCmdConfig                           0x0000109c   Section        0  gsm.o(i.vATCmdConfig)
+    i.vCheckAccount                          0x00001184   Section        0  gsm.o(i.vCheckAccount)
+    i.vGSMConfig                             0x00001380   Section        0  gsm.o(i.vGSMConfig)
+    i.vGSMUpdate                             0x000013c0   Section        0  gsm.o(i.vGSMUpdate)
+    i.vHardwareConfig                        0x000015bc   Section        0  main.o(i.vHardwareConfig)
+    i.vInput                                 0x000015e8   Section        0  sysclock.o(i.vInput)
+    i.vMainConfig                            0x00001658   Section        0  main.o(i.vMainConfig)
+    i.vReadPhonebook                         0x00001780   Section        0  gsm.o(i.vReadPhonebook)
+    i.vReadSignal                            0x00001824   Section        0  gsm.o(i.vReadSignal)
+    i.vSysTickConfig                         0x00001890   Section        0  sysclock.o(i.vSysTickConfig)
+    i.vSysTickHandler                        0x000018a4   Section        0  sysclock.o(i.vSysTickHandler)
+    i.vSysTickTimerExpired                   0x00001970   Section        0  sysclock.o(i.vSysTickTimerExpired)
+    i.vTaskScheduler                         0x00001a54   Section        0  task.o(i.vTaskScheduler)
+    i.vTaskStartScheduler                    0x00001a84   Section        0  task.o(i.vTaskStartScheduler)
+    i.vUART4Config                           0x00001a94   Section        0  uart4.o(i.vUART4Config)
+    i.vUART4Handler                          0x00001b40   Section        0  uart4.o(i.vUART4Handler)
+    i.vUART4Send                             0x00001c0c   Section        0  uart4.o(i.vUART4Send)
+    i.vUART6Config                           0x00001c68   Section        0  uart6.o(i.vUART6Config)
+    i.vUART6Handler                          0x00001ce4   Section        0  uart6.o(i.vUART6Handler)
+    i.vUART6Send                             0x00001da8   Section        0  uart6.o(i.vUART6Send)
+    i.vWDTConfig                             0x00001df4   Section        0  main.o(i.vWDTConfig)
+    i.vWDTHandler                            0x00001e24   Section        0  main.o(i.vWDTHandler)
+    .constdata                               0x00001e40   Section      128  main.o(.constdata)
+    .constdata                               0x00001ec0   Section       12  gsm.o(.constdata)
+    .constdata                               0x00001ecc   Section      552  gpio.o(.constdata)
+    g_ppui32GPIOIntMapBlizzard               0x00001ecc   Data         192  gpio.o(.constdata)
+    g_ppui32GPIOIntMapSnowflake              0x00001f8c   Data         216  gpio.o(.constdata)
+    g_pui32GPIOBaseAddrs                     0x00002064   Data         144  gpio.o(.constdata)
+    .constdata                               0x000020f4   Section      268  interrupt.o(.constdata)
+    g_pui32Priority                          0x000020f4   Data          32  interrupt.o(.constdata)
+    g_pui32Regs                              0x00002114   Data         156  interrupt.o(.constdata)
+    g_pui32EnRegs                            0x000021b0   Data          20  interrupt.o(.constdata)
+    g_pui32Dii16Regs                         0x000021c4   Data          20  interrupt.o(.constdata)
+    g_pui32PendRegs                          0x000021d8   Data          20  interrupt.o(.constdata)
+    g_pui32UnpendRegs                        0x000021ec   Data          20  interrupt.o(.constdata)
+    .constdata                               0x00002200   Section      596  sysctl.o(.constdata)
+    g_pui32VCOFrequencies                    0x00002200   Data           8  sysctl.o(.constdata)
+    g_pui32Xtals                             0x00002208   Data         108  sysctl.o(.constdata)
+    g_pppui32XTALtoVCO                       0x00002274   Data         432  sysctl.o(.constdata)
+    g_sXTALtoMEMTIM                          0x00002424   Data          48  sysctl.o(.constdata)
+    .data                                    0x20000000   Section        3  event.o(.data)
+    .data                                    0x20000003   Section        1  main.o(.data)
+    .data                                    0x20000004   Section       16  sysclock.o(.data)
+    .data                                    0x20000014   Section       16  uart6.o(.data)
+    .data                                    0x20000024   Section        6  uart4.o(.data)
+    ucUART4CounterTx                         0x20000028   Data           1  uart4.o(.data)
+    ucUART4RdIndexTx                         0x20000029   Data           1  uart4.o(.data)
+    .data                                    0x2000002c   Section      159  gsm.o(.data)
+    .data                                    0x200000cb   Section        1  gsm.o(.data)
+    .bss                                     0x200000cc   Section       30  event.o(.bss)
+    .bss                                     0x200000ec   Section       16  sysclock.o(.bss)
+    .bss                                     0x200000fc   Section      500  uart6.o(.bss)
+    .bss                                     0x200002f0   Section      128  uart4.o(.bss)
+    .bss                                     0x20000370   Section     1372  gsm.o(.bss)
+    STACK                                    0x200008d0   Section     1024  startup_rvmdk.o(STACK)
+    StackMem                                 0x200008d0   Data           0  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x00000289   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000289   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000291   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000291   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000299   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000299   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    SysCtlDelay                              0x0000029d   Thumb Code     6  sysctl.o(.emb_text)
+    CPUcpsid                                 0x000002a5   Thumb Code     8  cpu.o(.emb_text)
+    CPUprimask                               0x000002ad   Thumb Code     6  cpu.o(.emb_text)
+    CPUcpsie                                 0x000002b3   Thumb Code     8  cpu.o(.emb_text)
+    CPUwfi                                   0x000002bb   Thumb Code     4  cpu.o(.emb_text)
+    CPUbasepriSet                            0x000002bf   Thumb Code     6  cpu.o(.emb_text)
+    CPUbasepriGet                            0x000002c5   Thumb Code     6  cpu.o(.emb_text)
+    strcat                                   0x000002cb   Thumb Code    24  strcat.o(.text)
+    strstr                                   0x000002e3   Thumb Code    36  strstr.o(.text)
+    strlen                                   0x00000307   Thumb Code    14  strlen.o(.text)
+    strcpy                                   0x00000315   Thumb Code    18  strcpy.o(.text)
+    __scatterload                            0x00000329   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000329   Thumb Code     0  init.o(.text)
+    GPIODirModeSet                           0x0000034d   Thumb Code    40  gpio.o(i.GPIODirModeSet)
+    GPIOPadConfigSet                         0x00000375   Thumb Code   312  gpio.o(i.GPIOPadConfigSet)
+    GPIOPinConfigure                         0x000004ad   Thumb Code    60  gpio.o(i.GPIOPinConfigure)
+    GPIOPinRead                              0x000004f1   Thumb Code     6  gpio.o(i.GPIOPinRead)
+    GPIOPinTypeGPIOInput                     0x000004f7   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOInput)
+    GPIOPinTypeGPIOOutput                    0x00000513   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOOutput)
+    GPIOPinTypeUART                          0x0000052f   Thumb Code    28  gpio.o(i.GPIOPinTypeUART)
+    GPIOPinWrite                             0x0000054b   Thumb Code     6  gpio.o(i.GPIOPinWrite)
+    IntEnable                                0x00000551   Thumb Code    92  interrupt.o(i.IntEnable)
+    IntMasterEnable                          0x000005b5   Thumb Code    14  interrupt.o(i.IntMasterEnable)
+    SysCtlClockGet                           0x000005c5   Thumb Code   304  sysctl.o(i.SysCtlClockGet)
+    SysCtlClockSet                           0x00000719   Thumb Code   270  sysctl.o(i.SysCtlClockSet)
+    SysCtlPeripheralEnable                   0x00000839   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
+    SysTickEnable                            0x00000861   Thumb Code    14  systick.o(i.SysTickEnable)
+    SysTickIntEnable                         0x0000086f   Thumb Code    14  systick.o(i.SysTickIntEnable)
+    SysTickPeriodSet                         0x0000087d   Thumb Code    10  systick.o(i.SysTickPeriodSet)
+    UARTCharGet                              0x00000887   Thumb Code    12  uart.o(i.UARTCharGet)
+    UARTCharPutNonBlocking                   0x00000893   Thumb Code    16  uart.o(i.UARTCharPutNonBlocking)
+    UARTCharsAvail                           0x000008a3   Thumb Code    10  uart.o(i.UARTCharsAvail)
+    UARTConfigSetExpClk                      0x000008ad   Thumb Code   110  uart.o(i.UARTConfigSetExpClk)
+    UARTFIFOLevelSet                         0x0000091b   Thumb Code     6  uart.o(i.UARTFIFOLevelSet)
+    UARTIntClear                             0x00000921   Thumb Code     4  uart.o(i.UARTIntClear)
+    UARTIntEnable                            0x00000925   Thumb Code     8  uart.o(i.UARTIntEnable)
+    UARTIntStatus                            0x0000092d   Thumb Code    10  uart.o(i.UARTIntStatus)
+    WatchdogEnable                           0x00000937   Thumb Code    10  watchdog.o(i.WatchdogEnable)
+    WatchdogIntClear                         0x00000941   Thumb Code     6  watchdog.o(i.WatchdogIntClear)
+    WatchdogReloadSet                        0x00000947   Thumb Code     4  watchdog.o(i.WatchdogReloadSet)
+    WatchdogResetEnable                      0x0000094b   Thumb Code    10  watchdog.o(i.WatchdogResetEnable)
+    __scatterload_copy                       0x00000955   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000963   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000965   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    eGSMSendCmd                              0x00000975   Thumb Code   314  gsm.o(i.eGSMSendCmd)
+    eGSMSendMsg                              0x00000bd5   Thumb Code    22  gsm.o(i.eGSMSendMsg)
+    eGSMWaitOK                               0x00000bf9   Thumb Code    60  gsm.o(i.eGSMWaitOK)
+    eGSMWaitSendMsg                          0x00000c45   Thumb Code    34  gsm.o(i.eGSMWaitSendMsg)
+    eGSMWaitStatusCall                       0x00000c79   Thumb Code    82  gsm.o(i.eGSMWaitStatusCall)
+    eGSMWaitStatusReadNoPhone                0x00000cfd   Thumb Code    76  gsm.o(i.eGSMWaitStatusReadNoPhone)
+    main                                     0x00000d61   Thumb Code    28  main.o(i.main)
+    ui8GSMGetMsg                             0x00000d85   Thumb Code    60  gsm.o(i.ui8GSMGetMsg)
+    ui8GSMPoll                               0x00000dc9   Thumb Code   256  gsm.o(i.ui8GSMPoll)
+    ui8GSMPostMsg                            0x00000edd   Thumb Code    56  gsm.o(i.ui8GSMPostMsg)
+    ui8GSMSendATCmdCall                      0x00000f1d   Thumb Code    68  gsm.o(i.ui8GSMSendATCmdCall)
+    ui8GSMSendATCmdDisCall                   0x00000f69   Thumb Code    42  gsm.o(i.ui8GSMSendATCmdDisCall)
+    ui8GSMSendATCmdReadNoPhone               0x00000f9d   Thumb Code    18  gsm.o(i.ui8GSMSendATCmdReadNoPhone)
+    ui8GSMSendATCommand                      0x00000fb5   Thumb Code    54  gsm.o(i.ui8GSMSendATCommand)
+    ui8GSMSendATCommand2                     0x00000ff5   Thumb Code    60  gsm.o(i.ui8GSMSendATCommand2)
+    ui8GetEvent                              0x00001039   Thumb Code    44  event.o(i.ui8GetEvent)
+    ui8PostEvent                             0x0000106d   Thumb Code    40  event.o(i.ui8PostEvent)
+    vATCmdConfig                             0x0000109d   Thumb Code   230  gsm.o(i.vATCmdConfig)
+    vCheckAccount                            0x00001185   Thumb Code   446  gsm.o(i.vCheckAccount)
+    vGSMConfig                               0x00001381   Thumb Code    52  gsm.o(i.vGSMConfig)
+    vGSMUpdate                               0x000013c1   Thumb Code   488  gsm.o(i.vGSMUpdate)
+    vHardwareConfig                          0x000015bd   Thumb Code    40  main.o(i.vHardwareConfig)
+    vInput                                   0x000015e9   Thumb Code    98  sysclock.o(i.vInput)
+    vMainConfig                              0x00001659   Thumb Code   250  main.o(i.vMainConfig)
+    vReadPhonebook                           0x00001781   Thumb Code   136  gsm.o(i.vReadPhonebook)
+    vReadSignal                              0x00001825   Thumb Code    78  gsm.o(i.vReadSignal)
+    vSysTickConfig                           0x00001891   Thumb Code    18  sysclock.o(i.vSysTickConfig)
+    vSysTickHandler                          0x000018a5   Thumb Code   168  sysclock.o(i.vSysTickHandler)
+    vSysTickTimerExpired                     0x00001971   Thumb Code   178  sysclock.o(i.vSysTickTimerExpired)
+    vTaskScheduler                           0x00001a55   Thumb Code    44  task.o(i.vTaskScheduler)
+    vTaskStartScheduler                      0x00001a85   Thumb Code    14  task.o(i.vTaskStartScheduler)
+    vUART4Config                             0x00001a95   Thumb Code   140  uart4.o(i.vUART4Config)
+    vUART4Handler                            0x00001b41   Thumb Code   190  uart4.o(i.vUART4Handler)
+    vUART4Send                               0x00001c0d   Thumb Code    76  uart4.o(i.vUART4Send)
+    vUART6Config                             0x00001c69   Thumb Code    98  uart6.o(i.vUART6Config)
+    vUART6Handler                            0x00001ce5   Thumb Code   184  uart6.o(i.vUART6Handler)
+    vUART6Send                               0x00001da9   Thumb Code    62  uart6.o(i.vUART6Send)
+    vWDTConfig                               0x00001df5   Thumb Code    48  main.o(i.vWDTConfig)
+    vWDTHandler                              0x00001e25   Thumb Code    22  main.o(i.vWDTHandler)
+    MASK                                     0x00001e40   Data         128  main.o(.constdata)
+    g_scGSMCenterPhoneNumber                 0x00001ec0   Data          12  gsm.o(.constdata)
+    Region$$Table$$Base                      0x00002454   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002474   Number         0  anon$$obj.o(Region$$Table)
+    event_counter                            0x20000000   Data           1  event.o(.data)
+    event_write_index                        0x20000001   Data           1  event.o(.data)
+    event_read_index                         0x20000002   Data           1  event.o(.data)
+    wdt                                      0x20000003   Data           1  main.o(.data)
+    toggle                                   0x20000004   Data           1  sysclock.o(.data)
+    g_bButton                                0x20000005   Data           1  sysclock.o(.data)
+    ucSampleIndex                            0x20000006   Data           1  sysclock.o(.data)
+    count_10ms                               0x20000008   Data           2  sysclock.o(.data)
+    count_100ms                              0x2000000a   Data           2  sysclock.o(.data)
+    count_1s                                 0x2000000c   Data           2  sysclock.o(.data)
+    ulTimerButton                            0x2000000e   Data           2  sysclock.o(.data)
+    ulInport                                 0x20000010   Data           4  sysclock.o(.data)
+    g_ui8UART6CounterRx                      0x20000014   Data           1  uart6.o(.data)
+    g_eUART6StateRx                          0x20000015   Data           1  uart6.o(.data)
+    counter_uart6_tx                         0x20000016   Data           1  uart6.o(.data)
+    read_uart6_tx                            0x20000017   Data           1  uart6.o(.data)
+    g_ui32UART6DelayTx                       0x20000018   Data           4  uart6.o(.data)
+    g_ui32UART6DelayRx                       0x2000001c   Data           4  uart6.o(.data)
+    g_ui32UART6DelaySendRequest              0x20000020   Data           4  uart6.o(.data)
+    ucUART4DelayTx                           0x20000024   Data           1  uart4.o(.data)
+    ucUART4DelayRx                           0x20000025   Data           1  uart4.o(.data)
+    ucUART4CounterRx                         0x20000026   Data           1  uart4.o(.data)
+    eUART4StateRx                            0x20000027   Data           1  uart4.o(.data)
+    busy                                     0x2000002c   Data           1  gsm.o(.data)
+    no_carrier                               0x2000002d   Data           1  gsm.o(.data)
+    ring                                     0x2000002e   Data           1  gsm.o(.data)
+    g_eGSMState                              0x2000002f   Data           1  gsm.o(.data)
+    g_ucError                                0x20000030   Data           1  gsm.o(.data)
+    g_ucSignQuality                          0x20000031   Data           1  gsm.o(.data)
+    g_bGSMSendError                          0x20000032   Data           1  gsm.o(.data)
+    g_bGSMCall                               0x20000033   Data           1  gsm.o(.data)
+    g_ui8SendCmdCall                         0x20000034   Data           1  gsm.o(.data)
+    g_bGSMRevCall                            0x20000035   Data           1  gsm.o(.data)
+    g_bReadPhonebook                         0x20000036   Data           1  gsm.o(.data)
+    g_cIndexReadPhone                        0x20000037   Data           1  gsm.o(.data)
+    g_bSendDataLcd                           0x20000038   Data           1  gsm.o(.data)
+    g_bReadSignal                            0x20000039   Data           1  gsm.o(.data)
+    g_bSendCmdCheckAccount                   0x2000003a   Data           1  gsm.o(.data)
+    g_ui8GSMCommandDelay                     0x2000003b   Data           1  gsm.o(.data)
+    g_ui8CountButton                         0x2000003c   Data           1  gsm.o(.data)
+    indexCheckAc                             0x2000003d   Data           1  gsm.o(.data)
+    gsm_queue_counter                        0x2000003e   Data           1  gsm.o(.data)
+    gsm_write_index                          0x2000003f   Data           1  gsm.o(.data)
+    gsm_read_index                           0x20000040   Data           1  gsm.o(.data)
+    gsm_init_state                           0x20000041   Data           1  gsm.o(.data)
+    index1_sim                               0x20000042   Data           2  gsm.o(.data)
+    index2_sim                               0x20000044   Data           2  gsm.o(.data)
+    index3_sim                               0x20000046   Data           2  gsm.o(.data)
+    index4_sim                               0x20000048   Data           2  gsm.o(.data)
+    index5_sim                               0x2000004a   Data           2  gsm.o(.data)
+    g_ui16GSMRestartWaitting                 0x2000004c   Data           2  gsm.o(.data)
+    indexSim                                 0x20000050   Data           4  gsm.o(.data)
+    ulTimerRestart                           0x20000054   Data           4  gsm.o(.data)
+    ulTimerUpdate                            0x20000058   Data           4  gsm.o(.data)
+    ulTimerSendLcd                           0x2000005c   Data           4  gsm.o(.data)
+    ulTimerCheckAccount                      0x20000060   Data           4  gsm.o(.data)
+    gsm_send                                 0x20000064   Data           4  gsm.o(.data)
+    gsm_receive                              0x20000068   Data           4  gsm.o(.data)
+    syntaxCheckAccount                       0x2000006c   Data           5  gsm.o(.data)
+    lift_id                                  0x20000071   Data           7  gsm.o(.data)
+    numberphone1                             0x20000078   Data          12  gsm.o(.data)
+    numberphone2                             0x20000084   Data          12  gsm.o(.data)
+    numberphone3                             0x20000090   Data          12  gsm.o(.data)
+    numberphone4                             0x2000009c   Data          12  gsm.o(.data)
+    numberphone5                             0x200000a8   Data          12  gsm.o(.data)
+    gsm_response_liftID                      0x200000b4   Data          23  gsm.o(.data)
+    g_bGSM_Error                             0x200000cb   Data           1  gsm.o(.data)
+    event_queue                              0x200000cc   Data          30  event.o(.bss)
+    ulSample                                 0x200000ec   Data          16  sysclock.o(.bss)
+    g_ui8UART6FrameTx                        0x200000fc   Data         250  uart6.o(.bss)
+    g_ui8UART6BufferRx                       0x200001f6   Data         250  uart6.o(.bss)
+    ucUART4FrameTx                           0x200002f0   Data          64  uart4.o(.bss)
+    ucUART4BufferRx                          0x20000330   Data          64  uart4.o(.bss)
+    g_ucDataCheckAcccout                     0x20000370   Data         160  gsm.o(.bss)
+    gsm_queue                                0x20000410   Data        1200  gsm.o(.bss)
+    gsm_handle                               0x200008c0   Data          12  gsm.o(.bss)
+    __initial_sp                             0x20000cd0   Data           0  startup_rvmdk.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000289
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002540, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002474, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000288   Code   RO          250    RESET               startup_rvmdk.o
+    0x00000288   0x00000000   Code   RO         1724  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000004   Code   RO         1735    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x00000004   Code   RO         1738    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000000   Code   RO         1740    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000000   Code   RO         1742    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000008   Code   RO         1743    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000000   Code   RO         1745    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000298   0x00000000   Code   RO         1747    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000298   0x00000004   Code   RO         1736    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000029c   0x00000006   Code   RO          888    .emb_text           driverlib.lib(sysctl.o)
+    0x000002a2   0x00000002   PAD
+    0x000002a4   0x00000026   Code   RO         1714    .emb_text           driverlib.lib(cpu.o)
+    0x000002ca   0x00000018   Code   RO         1727    .text               mc_w.l(strcat.o)
+    0x000002e2   0x00000024   Code   RO         1729    .text               mc_w.l(strstr.o)
+    0x00000306   0x0000000e   Code   RO         1731    .text               mc_w.l(strlen.o)
+    0x00000314   0x00000012   Code   RO         1733    .text               mc_w.l(strcpy.o)
+    0x00000326   0x00000002   PAD
+    0x00000328   0x00000024   Code   RO         1749    .text               mc_w.l(init.o)
+    0x0000034c   0x00000028   Code   RO          446    i.GPIODirModeSet    driverlib.lib(gpio.o)
+    0x00000374   0x00000138   Code   RO          458    i.GPIOPadConfigSet  driverlib.lib(gpio.o)
+    0x000004ac   0x00000044   Code   RO          459    i.GPIOPinConfigure  driverlib.lib(gpio.o)
+    0x000004f0   0x00000006   Code   RO          460    i.GPIOPinRead       driverlib.lib(gpio.o)
+    0x000004f6   0x0000001c   Code   RO          469    i.GPIOPinTypeGPIOInput  driverlib.lib(gpio.o)
+    0x00000512   0x0000001c   Code   RO          470    i.GPIOPinTypeGPIOOutput  driverlib.lib(gpio.o)
+    0x0000052e   0x0000001c   Code   RO          482    i.GPIOPinTypeUART   driverlib.lib(gpio.o)
+    0x0000054a   0x00000006   Code   RO          488    i.GPIOPinWrite      driverlib.lib(gpio.o)
+    0x00000550   0x00000064   Code   RO          773    i.IntEnable         driverlib.lib(interrupt.o)
+    0x000005b4   0x0000000e   Code   RO          776    i.IntMasterEnable   driverlib.lib(interrupt.o)
+    0x000005c2   0x00000002   PAD
+    0x000005c4   0x00000154   Code   RO          891    i.SysCtlClockGet    driverlib.lib(sysctl.o)
+    0x00000718   0x00000120   Code   RO          893    i.SysCtlClockSet    driverlib.lib(sysctl.o)
+    0x00000838   0x00000028   Code   RO          922    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
+    0x00000860   0x0000000e   Code   RO         1237    i.SysTickEnable     driverlib.lib(systick.o)
+    0x0000086e   0x0000000e   Code   RO         1239    i.SysTickIntEnable  driverlib.lib(systick.o)
+    0x0000087c   0x0000000a   Code   RO         1243    i.SysTickPeriodSet  driverlib.lib(systick.o)
+    0x00000886   0x0000000c   Code   RO         1305    i.UARTCharGet       driverlib.lib(uart.o)
+    0x00000892   0x00000010   Code   RO         1308    i.UARTCharPutNonBlocking  driverlib.lib(uart.o)
+    0x000008a2   0x0000000a   Code   RO         1309    i.UARTCharsAvail    driverlib.lib(uart.o)
+    0x000008ac   0x0000006e   Code   RO         1313    i.UARTConfigSetExpClk  driverlib.lib(uart.o)
+    0x0000091a   0x00000006   Code   RO         1323    i.UARTFIFOLevelSet  driverlib.lib(uart.o)
+    0x00000920   0x00000004   Code   RO         1326    i.UARTIntClear      driverlib.lib(uart.o)
+    0x00000924   0x00000008   Code   RO         1328    i.UARTIntEnable     driverlib.lib(uart.o)
+    0x0000092c   0x0000000a   Code   RO         1330    i.UARTIntStatus     driverlib.lib(uart.o)
+    0x00000936   0x0000000a   Code   RO         1594    i.WatchdogEnable    driverlib.lib(watchdog.o)
+    0x00000940   0x00000006   Code   RO         1595    i.WatchdogIntClear  driverlib.lib(watchdog.o)
+    0x00000946   0x00000004   Code   RO         1604    i.WatchdogReloadSet  driverlib.lib(watchdog.o)
+    0x0000094a   0x0000000a   Code   RO         1606    i.WatchdogResetEnable  driverlib.lib(watchdog.o)
+    0x00000954   0x0000000e   Code   RO         1753    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000962   0x00000002   Code   RO         1754    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000964   0x0000000e   Code   RO         1755    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000972   0x00000002   PAD
+    0x00000974   0x00000260   Code   RO          298    i.eGSMSendCmd       gsm.o
+    0x00000bd4   0x00000024   Code   RO          299    i.eGSMSendMsg       gsm.o
+    0x00000bf8   0x0000004c   Code   RO          300    i.eGSMWaitOK        gsm.o
+    0x00000c44   0x00000034   Code   RO          301    i.eGSMWaitSendMsg   gsm.o
+    0x00000c78   0x00000084   Code   RO          302    i.eGSMWaitStatusCall  gsm.o
+    0x00000cfc   0x00000064   Code   RO          303    i.eGSMWaitStatusReadNoPhone  gsm.o
+    0x00000d60   0x00000024   Code   RO           51    i.main              main.o
+    0x00000d84   0x00000044   Code   RO          304    i.ui8GSMGetMsg      gsm.o
+    0x00000dc8   0x00000114   Code   RO          305    i.ui8GSMPoll        gsm.o
+    0x00000edc   0x00000040   Code   RO          306    i.ui8GSMPostMsg     gsm.o
+    0x00000f1c   0x0000004c   Code   RO          307    i.ui8GSMSendATCmdCall  gsm.o
+    0x00000f68   0x00000034   Code   RO          308    i.ui8GSMSendATCmdDisCall  gsm.o
+    0x00000f9c   0x00000018   Code   RO          309    i.ui8GSMSendATCmdReadNoPhone  gsm.o
+    0x00000fb4   0x00000040   Code   RO          310    i.ui8GSMSendATCommand  gsm.o
+    0x00000ff4   0x00000044   Code   RO          311    i.ui8GSMSendATCommand2  gsm.o
+    0x00001038   0x00000034   Code   RO            1    i.ui8GetEvent       event.o
+    0x0000106c   0x00000030   Code   RO            2    i.ui8PostEvent      event.o
+    0x0000109c   0x000000e6   Code   RO          312    i.vATCmdConfig      gsm.o
+    0x00001182   0x00000002   PAD
+    0x00001184   0x000001fc   Code   RO          313    i.vCheckAccount     gsm.o
+    0x00001380   0x00000040   Code   RO          314    i.vGSMConfig        gsm.o
+    0x000013c0   0x000001fc   Code   RO          315    i.vGSMUpdate        gsm.o
+    0x000015bc   0x0000002c   Code   RO           52    i.vHardwareConfig   main.o
+    0x000015e8   0x00000070   Code   RO          147    i.vInput            sysclock.o
+    0x00001658   0x00000128   Code   RO           53    i.vMainConfig       main.o
+    0x00001780   0x000000a4   Code   RO          316    i.vReadPhonebook    gsm.o
+    0x00001824   0x0000006c   Code   RO          317    i.vReadSignal       gsm.o
+    0x00001890   0x00000012   Code   RO          148    i.vSysTickConfig    sysclock.o
+    0x000018a2   0x00000002   PAD
+    0x000018a4   0x000000cc   Code   RO          149    i.vSysTickHandler   sysclock.o
+    0x00001970   0x000000e4   Code   RO          150    i.vSysTickTimerExpired  sysclock.o
+    0x00001a54   0x00000030   Code   RO          185    i.vTaskScheduler    task.o
+    0x00001a84   0x0000000e   Code   RO          186    i.vTaskStartScheduler  task.o
+    0x00001a92   0x00000002   PAD
+    0x00001a94   0x000000ac   Code   RO          255    i.vUART4Config      uart4.o
+    0x00001b40   0x000000cc   Code   RO          256    i.vUART4Handler     uart4.o
+    0x00001c0c   0x0000005c   Code   RO          258    i.vUART4Send        uart4.o
+    0x00001c68   0x0000007c   Code   RO          204    i.vUART6Config      uart6.o
+    0x00001ce4   0x000000c4   Code   RO          205    i.vUART6Handler     uart6.o
+    0x00001da8   0x0000004c   Code   RO          207    i.vUART6Send        uart6.o
+    0x00001df4   0x00000030   Code   RO           54    i.vWDTConfig        main.o
+    0x00001e24   0x0000001c   Code   RO           55    i.vWDTHandler       main.o
+    0x00001e40   0x00000080   Data   RO           56    .constdata          main.o
+    0x00001ec0   0x0000000c   Data   RO          319    .constdata          gsm.o
+    0x00001ecc   0x00000228   Data   RO          490    .constdata          driverlib.lib(gpio.o)
+    0x000020f4   0x0000010c   Data   RO          789    .constdata          driverlib.lib(interrupt.o)
+    0x00002200   0x00000254   Data   RO          944    .constdata          driverlib.lib(sysctl.o)
+    0x00002454   0x00000020   Data   RO         1751    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000cd0, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000003   Data   RW            4    .data               event.o
+    0x20000003   0x00000001   Data   RW           57    .data               main.o
+    0x20000004   0x00000010   Data   RW          152    .data               sysclock.o
+    0x20000014   0x00000010   Data   RW          209    .data               uart6.o
+    0x20000024   0x00000006   Data   RW          260    .data               uart4.o
+    0x2000002a   0x00000002   PAD
+    0x2000002c   0x0000009f   Data   RW          320    .data               gsm.o
+    0x200000cb   0x00000001   Data   RW          325    .data               gsm.o
+    0x200000cc   0x0000001e   Zero   RW            3    .bss                event.o
+    0x200000ea   0x00000002   PAD
+    0x200000ec   0x00000010   Zero   RW          151    .bss                sysclock.o
+    0x200000fc   0x000001f4   Zero   RW          208    .bss                uart6.o
+    0x200002f0   0x00000080   Zero   RW          259    .bss                uart4.o
+    0x20000370   0x0000055c   Zero   RW          318    .bss                gsm.o
+    0x200008cc   0x00000004   PAD
+    0x200008d0   0x00000400   Zero   RW          248    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       100         16          0          3         30       7957   event.o
+      3278        708         12        160       1372      18107   gsm.o
+       452         64        128          1          0       4628   main.o
+       648        622          0          0       1024        312   startup_rvmdk.o
+       562        100          0         16         16       4300   sysclock.o
+        62          4          0          0          0       1047   task.o
+       468         62          0          6        128       3534   uart4.o
+       396         52          0         16        500       3036   uart6.o
+
+    ----------------------------------------------------------------------
+      5972       1628        172        204       3076      42921   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          0          2          6          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        38          0          0          0          0        572   cpu.o
+       516          8        552          0          0       8713   gpio.o
+       114          8        268          0          0       2042   interrupt.o
+       674         58        596          0          0       4395   sysctl.o
+        38          0          0          0          0       1410   systick.o
+       176          0          0          0          0       5125   uart.o
+        30          0          0          0          0       1950   watchdog.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        24          0          0          0          0         68   strcat.o
+        18          0          0          0          0         68   strcpy.o
+        14          0          0          0          0         68   strlen.o
+        36          0          0          0          0         80   strstr.o
+
+    ----------------------------------------------------------------------
+      1772         90       1416          0          0      24559   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1586         74       1416          0          0      24207   driverlib.lib
+       178         16          0          0          0        352   mc_w.l
+
+    ----------------------------------------------------------------------
+      1772         90       1416          0          0      24559   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7744       1718       1588        204       3076      61280   Grand Totals
+      7744       1718       1588        204       3076      61280   ELF Image Totals
+      7744       1718       1588        204          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 9332 (   9.11kB)
+    Total RW  Size (RW Data + ZI Data)              3280 (   3.20kB)
+    Total ROM Size (Code + RO Data + RW Data)       9536 (   9.31kB)
+
+==============================================================================
+

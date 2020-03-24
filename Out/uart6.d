@@ -1,0 +1,17 @@
+.\out\uart6.o: uart6.c
+.\out\uart6.o: inc/global.h
+.\out\uart6.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\out\uart6.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdbool.h
+.\out\uart6.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\cstdint
+.\out\uart6.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\out\uart6.o: inc/config.h
+.\out\uart6.o: inc/gsm210.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\inc/hw_memmap.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\inc/hw_ints.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/sysctl.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/gpio.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/interrupt.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/uart.h
+.\out\uart6.o: ..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib/pin_map.h
+.\out\uart6.o: inc/uart6.h
+.\out\uart6.o: inc/event.h
