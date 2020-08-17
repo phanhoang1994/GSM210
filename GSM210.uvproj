@@ -364,7 +364,7 @@
               <MiscControls></MiscControls>
               <Define>rvmdk PART_TM4C123AE6PM TARGET_IS_TM4C123_RB1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\ti\TivaWare_C_Series-2.1.4.178</IncludePath>
+              <IncludePath>.\ti\TivaWare_C_Series-2.1.4.178</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -410,7 +410,7 @@
             <File>
               <FileName>driverlib.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib</FilePath>
+              <FilePath>.\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib</FilePath>
             </File>
           </Files>
         </Group>

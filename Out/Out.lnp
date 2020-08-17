@@ -1,5 +1,5 @@
 --cpu Cortex-M4.fp
-"..\..\..\..\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib"
+".\ti\TivaWare_C_Series-2.1.4.178\driverlib\rvmdk\driverlib.lib"
 ".\out\event.o"
 ".\out\main.o"
 ".\out\sysclock.o"
